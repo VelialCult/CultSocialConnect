@@ -1,0 +1,92 @@
+inventories:
+  main-menu:
+    title: "&8Социальные сети"
+    structure:
+      - '. . . . f . . . .'
+      - '. . . . . . . . .'
+      - '. . v . . . d . .'
+      - '. . . . . . . . .'
+      - 'p . . . . . . . p'
+      - 'p p p . c . p p p'
+    items:
+      pane:
+        symbol: p
+        custom: true
+        displayName: ""
+        lore: { }
+        item:
+          material: "BLUE_STAINED_GLASS_PANE"
+          head: ""
+      close:
+        symbol: c
+        custom: true
+        displayName: "&bЗакрыть"
+        lore:
+          - '&f'
+          - '&8➩ &bИспользуйте, чтобы вернуться'
+          - '     &bв прошлое меню'
+        actionOnClick:
+          - '[close]'
+        item:
+          material: "head"
+          head: ""
+      main:
+        displayName: "&9{social} &8| &bОсновная соц. сеть"
+        lore:
+          - '&f'
+          - '&fСоциальная сеть Вконтакте'
+          - ''
+          - '&fСтатус: &aПодключена'
+          - ''
+          - '&8➩ &bЭто ваша основная соц. сеть'
+        item:
+          material: "LIME_STAINED_GLASS_PANE"
+          head: ""
+      discord-connect:
+        symbol: d
+        displayName: "&9Discord &8| &aПодключена"
+        lore:
+          - '&f'
+          - '&fСоциальная сеть Discord'
+          - ''
+          - '&fСтатус: &aПодключена'
+          - ''
+          - '&8➩ &bНажмите, чтобы сделать основной'
+        item:
+          material: "head"
+          head: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2I5NDg0M2QzNDBhYmFkYmQ2NDAxZWY0ZWM3NGRjZWM0YjY2OTY2MTA2NWJkMWEwMWY5YTU5MDVhODkxOWM3MiJ9fX0="
+      vk-connect:
+        symbol: v
+        displayName: "&9ВКонакте &8| &aПодключена"
+        lore:
+          - '&f'
+          - '&fСоциальная сеть Вконтакте'
+          - ''
+          - '&fСтатус: &aПодключена'
+          - ''
+          - '&8➩ &bНажмите, чтобы сделать основной'
+        item:
+          material: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM1YWI5ZTEzOTNkOGQwNTI1YTZhZDhlODY3Y2E5MTBmYjUyNTBhYTNkYTQ3YzYzMTZlYTgzZTE0ZmU4In19fQ=="
+          head: ""
+      wait-code:
+        displayName: "&9{social} &8| &6Ожидает подтверждения"
+        lore:
+          - ''
+          - '&fСтатус: &6Ожидает подтверждения'
+          - ''
+          - '&8➩ &bНажмите, чтобы ввести код'
+        item:
+          material: "ORANGE_STAINED_GLASS_PANE"
+          head: ""
+      not-connect:
+        displayName: "&9{social} &8| &cНе подключена"
+        lore:
+          - ''
+          - '&fСтатус: &cНе подключена'
+          - ''
+          - '&8➩ &bЕсли хотите подключить, то'
+          - '     &bследуйте инструкциям, которые'
+          - '     &bвы можете найти в &lИнформация'
+        item:
+          material: "BARRIER"
+          head: ""

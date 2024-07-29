@@ -1,0 +1,11 @@
+main: ru.velialcult.socialconnect.CultSocialConnect
+api-version: 1.16
+version: '${project.version}'
+name: CultSocialConnect
+website: https://vk.com/velialcultstudio
+softdepend:
+  - VK-API
+depend:
+  - CultLibrary
+commands:
+  social:

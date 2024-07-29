@@ -1,0 +1,18 @@
+settings:
+  discord:
+    use: true # Использовать ли дискорд
+    token: "MTIwNjMyNDA5NDU2NDQ0MjE1Mg.GhQtIs.dwW8KhZP2VpRJBFOuiTt8tpadlJoAqaCaDkStQ" # Токен для дискорда
+    activity: "Слушает VelialSquad" # Настройка текста активности в дискорд
+  database:
+    type: "sqlite" # Mysql, sqlite
+    mysql:
+      host: "host"
+      database: "database"
+      username: "username"
+      password: "pass"
+  session:
+    session-time: 1d # Сессия будет длиться в течении одного дня
+  authorization:
+    blocked:  # Команды, которые будут выполняться при запрете входа
+      - 'kick {player}'
+    time: 1m # Время для подтверждения входа через социальную сеть
