@@ -1,7 +1,7 @@
 settings:
   discord:
     use: true # Использовать ли дискорд
-    token: "MTIwNjMyNDA5NDU2NDQ0MjE1Mg.GhQtIs.dwW8KhZP2VpRJBFOuiTt8tpadlJoAqaCaDkStQ" # Токен для дискорда
+    token: "" # Токен для дискорда
     activity: "Слушает VelialSquad" # Настройка текста активности в дискорд
   database:
     type: "sqlite" # Mysql, sqlite
