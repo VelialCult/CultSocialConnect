@@ -1,6 +1,6 @@
 settings:
   discord:
-    use: true # Использовать ли дискорд
+    use: false # Использовать ли дискорд
     token: "" # Токен для дискорда
     activity: "Слушает VelialSquad" # Настройка текста активности в дискорд
   database:
