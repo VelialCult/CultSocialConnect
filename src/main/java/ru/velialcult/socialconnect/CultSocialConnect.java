@@ -6,6 +6,7 @@ import ru.velialcult.library.bukkit.file.FileRepository;
 import ru.velialcult.library.bukkit.utils.ConfigurationUtil;
 import ru.velialcult.library.java.database.DataBase;
 import ru.velialcult.library.java.database.DataBaseType;
+import ru.velialcult.library.update.UpdateChecker;
 import ru.velialcult.socialconnect.command.SocialCommand;
 import ru.velialcult.socialconnect.discord.DiscordService;
 import ru.velialcult.socialconnect.file.InventoriesFile;
@@ -47,6 +48,9 @@ public class CultSocialConnect extends JavaPlugin {
             loadFiles();
             ProvidersManager providersManager = new ProvidersManager(this);
             providersManager.load();
+
+            UpdateChecker updateChecker = new UpdateChecker(this, "CultSocialConnect");
+            updateChecker.check();
 
             String dataBaseType = getConfig().getString("settings.database.type");
             if (dataBaseType.equalsIgnoreCase("mysql")) {
