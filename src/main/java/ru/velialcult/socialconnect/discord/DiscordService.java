@@ -12,6 +12,7 @@ import ru.velialcult.socialconnect.social.SocialAccountManager;
 import ru.velialcult.socialconnect.social.types.SocialType;
 import ru.velialcult.socialconnect.twofactorauthorization.TwoFactorAuthorizationService;
 
+import javax.security.auth.login.LoginException;
 import java.util.UUID;
 
 /**
@@ -28,7 +29,7 @@ public class DiscordService {
                           MessagesFile messagesFile,
                           SocialAccountManager socialAccountManager,
                           TwoFactorAuthorizationService twoFactorAuthorizationService,
-                          SocialMediaAccountLinker socialMediaAccountLinker) {
+                          SocialMediaAccountLinker socialMediaAccountLinker) throws LoginException {
         this.jda = JDABuilder.createDefault(cultSocialConnect.getConfig().getString("settings.discord.token"))
                 .enableIntents(GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES, GatewayIntent.MESSAGE_CONTENT)
                 .setActivity(Activity.playing(cultSocialConnect.getConfig().getString("settings.discord.activity")))

@@ -80,7 +80,7 @@ public class CultSocialConnect extends JavaPlugin {
                                           twoFactorAuthorizationService,
                                           socialMediaAccountLinker);
 
-            if (getConfig().getBoolean("settings.discord.use", false)) {
+            if (providersManager.useDiscordBotAPI() && getConfig().getBoolean("settings.discord.use", false)) {
                 discordService = new DiscordService(this,
                                                     messagesFile,
                                                     accountStorage,
