@@ -1,6 +1,7 @@
 package ru.velialcult.socialconnect.social.types;
 
 import ru.velialcult.socialconnect.CultSocialConnect;
+import ru.velialcult.socialconnect.discord.DiscordService;
 import ru.velialcult.socialconnect.social.SocialAccount;
 
 /**
@@ -19,7 +20,10 @@ public class DiscordAccount implements SocialAccount {
     }
 
     public void sendMessage(String text) {
-        CultSocialConnect.getInstance().getDiscordManager().sendMessage(text, userID);
+        DiscordService discordService = CultSocialConnect.getInstance().getDiscordManager();
+        if (discordService != null) {
+            discordService.sendMessage(text, userID);
+        }
     }
 
     @Override

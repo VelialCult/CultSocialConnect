@@ -2,6 +2,7 @@ package ru.velialcult.socialconnect.social.types;
 
 import ru.velialcult.socialconnect.CultSocialConnect;
 import ru.velialcult.socialconnect.social.SocialAccount;
+import ru.velialcult.socialconnect.vk.VKService;
 
 public class VKAccount implements SocialAccount {
 
@@ -14,7 +15,10 @@ public class VKAccount implements SocialAccount {
     }
 
     public void sendMessage(String text) {
-        CultSocialConnect.getInstance().getVkManager().sendMessage(text, userID);
+        VKService vkService = CultSocialConnect.getInstance().getVkManager();
+        if (vkService != null) {
+            vkService.sendMessage(text, userID);
+        }
     }
 
     @Override
