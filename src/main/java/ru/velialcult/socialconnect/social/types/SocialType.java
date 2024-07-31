@@ -1,8 +1,8 @@
 package ru.velialcult.socialconnect.social.types;
 
 public enum SocialType {
-    DISCORD("Discord"),
-    VK("ВКонтакте");
+    DISCORD("&dDiscord"),
+    VK("&9ВКонтакте");
 
     private final String translationText;
 

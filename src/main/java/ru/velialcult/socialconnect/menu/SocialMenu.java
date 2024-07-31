@@ -49,10 +49,10 @@ public class SocialMenu {
                 return InventoryUtil.createItem(config, "inventories.main-menu.items.vk-connect");
             } else if (socialMediaAccountLinker.hasRequestLinkAccount(player.getUniqueId(), SocialType.VK)) {
                 return InventoryUtil.createItem(config, "inventories.main-menu.items.wait-code",
-                                                new ReplaceData("{social}", SocialType.VK));
+                                                new ReplaceData("{social}", SocialType.VK.getTranslationText()));
             } else {
                 return InventoryUtil.createItem(config, "inventories.main-menu.items.not-connect",
-                                                       new ReplaceData("{social}", SocialType.VK));
+                                                       new ReplaceData("{social}", SocialType.VK.getTranslationText()));
             }
         }) {
             @Override
@@ -93,15 +93,16 @@ public class SocialMenu {
         AutoUpdateItem discord = new AutoUpdateItem(20, () ->
                 s -> {
                     if (socialUser.hasSocialAccount(SocialType.DISCORD) && socialUser.getMainSocialAccount() == socialUser.getSocialAccount(SocialType.DISCORD)) {
-                        return InventoryUtil.createItem(config, "inventories.main-menu.items.main");
+                        return InventoryUtil.createItem(config, "inventories.main-menu.items.main",
+                                                        new ReplaceData("{social}", SocialType.DISCORD.getTranslationText()));
                     } else if (socialUser.hasSocialAccount(SocialType.DISCORD)) {
                         return InventoryUtil.createItem(config, "inventories.main-menu.items.discord-connect");
                     } else if (socialMediaAccountLinker.hasRequestLinkAccount(player.getUniqueId(), SocialType.DISCORD)) {
                         return InventoryUtil.createItem(config, "inventories.main-menu.items.wait-code",
-                                                        new ReplaceData("{social}", SocialType.DISCORD));
+                                                        new ReplaceData("{social}", SocialType.DISCORD.getTranslationText()));
                     } else {
                         return InventoryUtil.createItem(config, "inventories.main-menu.items.not-connect",
-                                                        new ReplaceData("{social}", SocialType.DISCORD));
+                                                        new ReplaceData("{social}", SocialType.DISCORD.getTranslationText()));
                     }
                 }) {
             @Override
