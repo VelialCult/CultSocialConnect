@@ -17,7 +17,7 @@ public class ProvidersManager {
 
     public void load() {
         loadProvider("VK-API", "0.4.1");
-        loadProvider("DiscordBotAPI", "5.3");
+        loadProvider("DiscordBotAPI", "5.1");
     }
 
     private void loadProvider(String pluginName, String minVersion) {
