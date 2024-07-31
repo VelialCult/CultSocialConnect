@@ -17,7 +17,6 @@ public class ProvidersManager {
 
     public void load() {
         loadProvider("VK-API", "0.4.1");
-        loadProvider("DiscordBotAPI", "5.1");
     }
 
     private void loadProvider(String pluginName, String minVersion) {
@@ -40,6 +39,4 @@ public class ProvidersManager {
     public boolean useVkAPI() {
         return providers.getOrDefault("VK-API", false);
     }
-    
-    public boolean useDiscordBotAPI() { return providers.getOrDefault("DiscordBotAPI", false);}
 }
